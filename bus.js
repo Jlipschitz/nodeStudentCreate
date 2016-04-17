@@ -21,7 +21,7 @@ var Bus = function(driverName, color, gas) {
             this.busChatter();
         }
     }
-    this.removeStuden = function(studentName) {
+    this.removeStudent = function(studentName) {
         for(var i = 0; i < this.studentsOnTheBus.legnth; i++) {
             if(this.studentsOnTheBus[i].name === studentName) {
                 this.studentsOnTheBus.splice(i, 1);
