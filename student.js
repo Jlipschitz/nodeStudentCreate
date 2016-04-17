@@ -1,5 +1,3 @@
-var prompt = require("prompt");
-
 var Student = function(name, gender, grade, GPA, detentions,
     sleepingInClass, catchPhrase) {
     this.name = name;
@@ -10,8 +8,10 @@ var Student = function(name, gender, grade, GPA, detentions,
     this.sleepingInClass = sleepingInClass;
     this.catchPhrase = catchPhrase;
     this.canStudentHaveFun = function() {
-        if (Student.GPA > 2 && Student.detentions < 10) {
+        if (this.GPA > 2 && this.detentions < 10) {
             console.log("student can have fun");
+        } else {
+            console.log("student cannot have fun");
         }
     }
 }
