@@ -23,7 +23,6 @@ function takeInStudent() {
 		myNewBus.attendance(); //calls bus chatter if # students on bus are equal to or greater than twenty
 		startInput();
 	});
-
 }
 function takeOutStudent() {
 	input.removeDialog();
@@ -32,7 +31,6 @@ function takeOutStudent() {
 		myNewBus.removeStudent(result.remove);
 		startInput();
 	});
-
 }
 function startInput() {
 	if (input.repeatInitialQ === false) {
