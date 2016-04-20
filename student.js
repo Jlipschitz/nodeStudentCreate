@@ -1,4 +1,4 @@
-var Student = function(name, gender, grade, GPA, detentions,
+var Student = function (name, gender, grade, GPA, detentions,
     sleepingInClass, catchPhrase) {
     this.name = name;
     this.gender = gender;
@@ -7,7 +7,7 @@ var Student = function(name, gender, grade, GPA, detentions,
     this.detentions = detentions;
     this.sleepingInClass = sleepingInClass;
     this.catchPhrase = catchPhrase;
-    this.canStudentHaveFun = function() {
+    this.canStudentHaveFun = function () {
         if (this.GPA > 2 && this.detentions < 10) {
             console.log("student can have fun");
         } else {
