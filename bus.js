@@ -30,6 +30,7 @@ var Bus = function (driverName, color, gas) {
                 this.studentsOnTheBus.splice(i, 1);
             }
         }
+        //display the student that was remvoed within our removeStudent function
         console.log(this.studentsOnTheBus);
     }
 }
