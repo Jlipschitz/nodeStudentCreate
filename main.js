@@ -2,15 +2,16 @@ var prompt = require("prompt")
 var Bus = require("./bus.js");
 prompt.start();
 
+//create a bus constructor
 var myNewBus = new Bus("Joseph", "Yellow", 15);
-
+//input object for console logs
 var input = {
 	add: function () { console.log("Type \"delete\" to remove student from bus. Type \"append\" to add student to the bus.") },
 	askAgain: function () { console.log("The bus driver did understand your command. Type \"append\" or \"delete\".") },
 	repeatInitialQ: false,
 	removeDialog: function () { console.log("Type the name of the student you wish to remvoe from the bus.") }
 }
-
+//add student to our bus
 function takeInStudent() {
 	prompt.get(['name', 'gender', 'grade', 'GPA', 'detentions',
 		'sleepingInClass', 'catchPhrase'
@@ -24,6 +25,7 @@ function takeInStudent() {
 		startInput();
 	});
 }
+//remove student from our bus
 function takeOutStudent() {
 	input.removeDialog();
 
@@ -32,6 +34,7 @@ function takeOutStudent() {
 		startInput();
 	});
 }
+//initial function that callsback takeOutStudent() or takeInStudent()
 function startInput() {
 	if (input.repeatInitialQ === false) {
 		input.add();
