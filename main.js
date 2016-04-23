@@ -16,13 +16,13 @@ function takeInStudent() {
 	prompt.get(['name', 'gender', 'grade', 'GPA', 'detentions',
 		'sleepingInClass', 'catchPhrase'
 	], function (err, result) {
-
+		//pass values in our bus constructor once we gather input from our prompts and create a new student
 		myNewBus.studentEntersBus(result.name, result.gender, result.grade, result.GPA, result.detentions,
 			result.sleepingInClass, result.catchPhrase);
-
+		
 		myNewBus.studentsOnTheBus[0].canStudentHaveFun();
-		myNewBus.attendance(); //calls bus chatter if # students on bus are equal to or greater than twenty
-		startInput();
+		myNewBus.attendance(); 
+		startInput(); 
 	});
 }
 //remove student from our bus
