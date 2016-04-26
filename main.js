@@ -6,8 +6,8 @@ prompt.start();
 var myNewBus = new Bus("Joseph", "Yellow", 15);
 //input object for console logs
 var input = {
-	add: function () { console.log("Type \"delete\" to remove student from bus. Type \"append\" to add student to the bus.") },
-	askAgain: function () { console.log("The bus driver did understand your command. Type \"append\" or \"delete\".") },
+	addQuestion: function () { console.log("Type \"delete\" to remove student from bus. Type \"append\" to add student to the bus.") },
+	askAgain: function () { console.log("The bus driver did not understand your command. Type \"append\" or \"delete\".") },
 	repeatInitialQ: false,
 	removeDialog: function () { console.log("Type the name of the student you wish to remvoe from the bus.") }
 }
@@ -37,7 +37,7 @@ function takeOutStudent() {
 //initial function that callsback takeOutStudent() or takeInStudent()
 function startInput() {
 	if (input.repeatInitialQ === false) {
-		input.add();
+		input.addQuestion();
 	}
 	prompt.get(['action'], function (err, result) {
 		if (result.action === "append") {
